@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class LevelSpawner : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     [SerializeField] private GameObject _wallPrefab;
     [SerializeField] private GameObject _finishPrefab;
