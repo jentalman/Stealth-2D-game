@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class WallGeneration
 {
-    public int _x;
-    public int _y;
-    public bool _wallActive = true;
+    public int X;
+    public int Y;
+    public bool WallActive = true;
 }
 
 public class LevelGeneration
@@ -25,7 +20,7 @@ public class LevelGeneration
         {
             for (int y = 0; y < level.GetLength(1); y++)
             {
-                level[x, y] = new WallGeneration { _x = x, _y = y };
+                level[x, y] = new WallGeneration { X = x, Y = y };
             }
         }
 
@@ -43,7 +38,7 @@ public class LevelGeneration
 
             if (randInt > 8)
             {
-                wall._wallActive = false;
+                wall.WallActive = false;
             }
 
         }
@@ -60,7 +55,7 @@ public class LevelGeneration
 
                 for (int y = 0; y < level.GetLength(1); y++)
                 {
-                    level[x, y]._wallActive = false;
+                    level[x, y].WallActive = false;
                 }
             }
         }
@@ -78,7 +73,7 @@ public class LevelGeneration
 
                 for (int x = 0; x < level.GetLength(1); x++)
                 {
-                    level[x, y]._wallActive = false;
+                    level[x, y].WallActive = false;
                 }
             }
         }
@@ -91,7 +86,7 @@ public class LevelGeneration
         bool stopGenerating = false;
 
         WallGeneration currentWall = level[currentX, currentY];
-        currentWall._wallActive = false;
+        currentWall.WallActive = false;
 
         _direction = UnityEngine.Random.Range(1, 6);
 
@@ -104,7 +99,7 @@ public class LevelGeneration
                 {
                     currentX++;
                     currentWall = level[currentX, currentY];
-                    currentWall._wallActive = false;
+                    currentWall.WallActive = false;
 
                     _direction = UnityEngine.Random.Range(1, 6);
                     if (_direction == 3)
@@ -128,7 +123,7 @@ public class LevelGeneration
                 {
                     currentX--;
                     currentWall = level[currentX, currentY];
-                    currentWall._wallActive = false;
+                    currentWall.WallActive = false;
 
                     _direction = UnityEngine.Random.Range(3, 6);
                 }
@@ -145,7 +140,7 @@ public class LevelGeneration
                 {
                     currentY++;
                     currentWall = level[currentX, currentY];
-                    currentWall._wallActive = false;
+                    currentWall.WallActive = false;
 
                     _direction = UnityEngine.Random.Range(1, 6);
                 }
@@ -153,7 +148,7 @@ public class LevelGeneration
                 {
                     currentX++;
                     currentWall = level[currentX, currentY];
-                    currentWall._wallActive = false;
+                    currentWall.WallActive = false;
                 }
 
                 else

@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -37,7 +36,7 @@ public class LevelManager : MonoBehaviour
             {
                 GameObject wall = Instantiate(_wallPrefab, new Vector2(x, y), Quaternion.identity, transform);
 
-                wall.SetActive(level[x, y]._wallActive);
+                wall.SetActive(level[x, y].WallActive);
             }
         }
 
