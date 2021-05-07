@@ -56,17 +56,17 @@ public class EventsLisiner : MonoBehaviour
         }
     }
 
-    public void GetCollisionEvents(EnemyCollision gameOver)
+    public void AddCollisionEvents(EnemyCollision gameOver)
     {
         _gameOverEvents.Add(gameOver);
     }
 
-    public void GetTriggersEvents(EnemyTrigger detected)
+    public void AddTriggersEvents(EnemyTrigger detected)
     {
         _detectedEvents.Add(detected);
     }
 
-    public void GetStateEvents(Enemy state)
+    public void AddStateEvents(Enemy state)
     {
         _states.Add(state);
     }

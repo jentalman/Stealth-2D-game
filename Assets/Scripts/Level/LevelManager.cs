@@ -18,9 +18,9 @@ public class LevelManager : MonoBehaviour
         {
             _enemies[i] = Instantiate(_enemyTemplate);
             _enemies[i].GetComponent<ChaseState>().InitTarget(_target);
-            _eventsLisiner.GetTriggersEvents(_enemies[i].GetComponentInChildren<EnemyTrigger>());
-            _eventsLisiner.GetCollisionEvents(_enemies[i].GetComponent<EnemyCollision>());
-            _eventsLisiner.GetStateEvents(_enemies[i].GetComponent<Enemy>());
+            _eventsLisiner.AddTriggersEvents(_enemies[i].GetComponentInChildren<EnemyTrigger>());
+            _eventsLisiner.AddCollisionEvents(_enemies[i].GetComponent<EnemyCollision>());
+            _eventsLisiner.AddStateEvents(_enemies[i].GetComponent<Enemy>());
         }
         
     }
